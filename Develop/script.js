@@ -28,6 +28,12 @@ console.log(numbers)
 var specials = window.confirm("Would you like to include specials in your password? Click 'OK' for yes or 'Cancel' for no.")
 console.log(specials)
 
+// actual list of each variable to be pushed
+var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var numberList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+var specialsList = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "="]
+
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
