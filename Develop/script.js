@@ -1,5 +1,20 @@
 // Assignment code here
 
+// functions to randomize selected lists
+function randomize(min, max) {
+  if (!max) {
+    max = min
+    min = 0
+  }
+  var rand = Math.random()
+  return Math.floor(min*(1 - rand) + rand*max)
+}
+
+function randomList(list) {
+  return list[randomize(list.length)]
+}
+
+// generates the password
 function generatePassword() {
   // repeats prompt until valid input is entered
   while (true) {
@@ -54,7 +69,14 @@ if (specials === true) {
   passwordGoesHere.push(specialsList)
 }
 
-generatePassword = passwordGoesHere
+var generatePassword = ""
+
+// for to create loop every time i is less than passwordLength set by user
+for (var i = 0; i < passwordLength; i++) {
+  var random = randomList(passwordGoesHere)
+  var randomCharacters = randomList(random)
+  generatePassword += randomCharacters
+}
 
 return generatePassword
 }
