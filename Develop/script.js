@@ -1,12 +1,22 @@
 // Assignment code here
 
 function generatePassword() {
+  // repeats prompt until valid input is entered
+  while (true) {
+  // ask user how long they would like password to be
   var length = window.prompt("How long would you like your password to be? Please enter a numerical value between 8 and 128.")
+  // turns input into number
   var passwordLength = Number(length)
   console.log(passwordLength)
 
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    window.alert("Please input a valid numerical value between 8 and 128.")
+  }
+  else {
+    break
+  }
 }
-
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
